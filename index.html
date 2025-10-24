@@ -15,403 +15,138 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <!-- Styles -->
-    <link rel="stylesheet" href="styles_minimal.css">
+    <link rel="stylesheet" href="styles_multipage_modern.css">
 </head>
 <body>
     
-    <!-- Navigation - Minimal and Fixed -->
+    <!-- Navigation -->
     <nav class="nav">
         <div class="nav-container">
-            <div class="nav-brand">Jason Sun</div>
+            <a href="index.html" class="nav-brand">Jason Sun</a>
             <div class="nav-links">
-                <a href="#about" class="nav-link">About</a>
-                <a href="#research" class="nav-link">Research</a>
-                <a href="#publications" class="nav-link">Publications</a>
-                <a href="#experience" class="nav-link">Experience</a>
-                <a href="#interests" class="nav-link">Life</a>
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="research.html" class="nav-link">Research</a>
+                <a href="industry.html" class="nav-link">Industry</a>
+                <a href="projects.html" class="nav-link">Projects</a>
+                <a href="publications.html" class="nav-link">Publications</a>
+                <a href="cv.pdf" class="nav-link">CV</a>
             </div>
         </div>
     </nav>
 
-    <!-- Hero - Clean Introduction -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1 class="hero-name">Xiaojian (Jason) Sun</h1>
-            <p class="hero-title">Graduate Researcher • Johns Hopkins University</p>
-            <p class="hero-description">
-                I build AI systems that amplify human expertise. My research focuses on culturally-aware foundation models 
-                and human-AI collaboration, with applications in sports analytics, surgical robotics, and embodied intelligence.
-            </p>
-            <div class="hero-links">
-                <a href="mailto:xsun90@jh.edu" class="hero-link">
-                    <i class="fas fa-envelope"></i> Email
-                </a>
-                <a href="cv.pdf" class="hero-link">
-                    <i class="fas fa-file-pdf"></i> CV
-                </a>
-                <a href="https://github.com/luh-j" class="hero-link">
-                    <i class="fab fa-github"></i> GitHub
-                </a>
-                <a href="https://scholar.google.com" class="hero-link">
-                    <i class="fas fa-graduation-cap"></i> Scholar
-                </a>
-                <a href="https://linkedin.com/in/jxj-sun" class="hero-link">
-                    <i class="fab fa-linkedin"></i> LinkedIn
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about">
+    <!-- Main Content -->
+    <main class="main-content">
         <div class="container">
-            <div class="section-label">Background</div>
-            <h2 class="section-title">About</h2>
-            
-            <p>
-                I'm a Master's student in Robotics at Johns Hopkins University, working across 
-                <a href="#" class="text-link">CLSP</a>, 
-                <a href="#" class="text-link">SARG</a>, 
-                <a href="#" class="text-link">SMARTS Lab</a>, and 
-                <a href="#" class="text-link">Intuitive Computing Lab</a>. 
-                I completed my undergraduate at UC Berkeley with a triple major in Computer Science, Economics, and Music.
-            </p>
-            
-            <p>
-                My research vision centers on developing AI that dramatically amplifies human abilities rather than replacing them. 
-                I believe the future lies in augmentation—creating systems that enable people to see, think, and act in extraordinary ways.
-            </p>
-            
-            <div style="margin-top: 2rem;">
-                <h3>Research Focus</h3>
-                <ul style="list-style: none; padding: 0;">
-                    <li style="margin-bottom: 1rem;">
-                        <strong>Culturally-Aware Foundation Models</strong><br>
-                        <span style="color: var(--text-secondary); font-size: 0.9375rem;">
-                            Making vision-language models respect and represent diverse cultural perspectives
-                        </span>
-                    </li>
-                    <li>
-                        <strong>Human-AI Collaboration Systems</strong><br>
-                        <span style="color: var(--text-secondary); font-size: 0.9375rem;">
-                            Developing agentic frameworks for high-stakes environments like surgery and sports analytics
-                        </span>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- Research Section -->
-    <section id="research" style="background: var(--bg-gray);">
-        <div class="container-wide">
-            <div class="section-label">Current Work</div>
-            <h2 class="section-title">Research Projects</h2>
-            
-            <div class="project-grid">
-                <!-- NFL Intelligence System -->
-                <div class="project-card">
-                    <h3 class="project-title">AI-Driven Intelligence for NFL Decision Support</h3>
-                    <p class="project-meta">Baltimore Ravens • MIT SSAC 2026 (Under Review)</p>
-                    <p class="project-description">
-                        Leading development of on-premise LLM agentic system combining RAG and text-to-SQL for NFL operations. 
-                        Processing 40,000+ articles on 2,000 prospects, reducing research time by 65% while preserving analyst judgment.
+            <!-- Hero Section -->
+            <section class="hero-section">
+                <h1 class="hero-name">Xiaojian (Jason) Sun</h1>
+                <p class="hero-tagline">Building AI Systems that Amplify Human Expertise</p>
+                
+                <div class="hero-description">
+                    <p>
+                        I'm a Master's student in Robotics at Johns Hopkins University, working at the intersection 
+                        of AI and human expertise. My research focuses on culturally-aware foundation models and 
+                        human-AI collaboration systems.
                     </p>
-                    <div class="project-tags">
-                        <span class="tag">LLMs</span>
-                        <span class="tag">RAG</span>
-                        <span class="tag">Sports Analytics</span>
-                        <span class="tag">Industry Partnership</span>
-                    </div>
-                </div>
-
-                <!-- Cultural Alignment -->
-                <div class="project-card">
-                    <h3 class="project-title">Multilingual Multimodal Cultural Alignment</h3>
-                    <p class="project-meta">CLSP, JHU • Advisors: Dr. Kenton Murray, Prof. Ziang Xiao</p>
-                    <p class="project-description">
-                        Investigating cultural biases in text-to-image models across linguistic communities. Building evaluation 
-                        frameworks to measure whether generative models produce culturally authentic representations.
+                    <p>
+                        Currently, I work across multiple labs including 
+                        <a href="#" class="text-link">CLSP</a>, 
+                        <a href="#" class="text-link">SARG</a>, 
+                        <a href="#" class="text-link">SMARTS Lab</a>, and the
+                        <a href="#" class="text-link">Intuitive Computing Lab</a>, 
+                        developing AI systems for NFL analytics, surgical robotics, and embodied intelligence.
                     </p>
-                    <div class="project-tags">
-                        <span class="tag">Vision-Language</span>
-                        <span class="tag">Cultural AI</span>
-                        <span class="tag">Multimodal</span>
-                    </div>
-                </div>
-
-                <!-- Surgical Robotics -->
-                <div class="project-card">
-                    <h3 class="project-title">Adaptive Teleoperation for Surgical Robotics</h3>
-                    <p class="project-meta">SMARTS Lab • ICRA 2026 (Under Review)</p>
-                    <p class="project-description">
-                        Developing human-performance-aware teleoperation systems that adapt motion scaling based on surgeon expertise. 
-                        System optimizes precision while maintaining surgeon agency in critical procedures.
-                    </p>
-                    <div class="project-tags">
-                        <span class="tag">Surgical Robotics</span>
-                        <span class="tag">Human-Robot Interaction</span>
-                        <span class="tag">Adaptive Systems</span>
-                    </div>
-                </div>
-
-                <!-- VLM for Robotics -->
-                <div class="project-card">
-                    <h3 class="project-title">Vision-Language Models for Robot Learning</h3>
-                    <p class="project-meta">Intuitive Computing Lab • ICRA 2026 (Under Review)</p>
-                    <p class="project-description">
-                        Creating instructor-distilled embeddings for robot policy enhancement. Achieved 40% improvement in 
-                        task success rates through multimodal guidance systems.
-                    </p>
-                    <div class="project-tags">
-                        <span class="tag">VLMs</span>
-                        <span class="tag">Robot Learning</span>
-                        <span class="tag">Embodied AI</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Publications Section -->
-    <section id="publications">
-        <div class="container">
-            <div class="section-label">Papers</div>
-            <h2 class="section-title">Publications</h2>
-            
-            <div class="publication-list">
-                <div class="publication">
-                    <div class="publication-title">
-                        From Chaos to Clarity: AI-Driven News Intelligence for NFL Front Offices
-                    </div>
-                    <div class="publication-authors">
-                        <strong>Xiaojian Sun</strong>, Siva Indukuri, Nahuel Albayrak, Joyce Chen, Kenton Murray, Anton Dahbura, Tad Berkery
-                    </div>
-                    <div class="publication-venue">
-                        MIT Sloan Sports Analytics Conference (SSAC) 2026 • Under Review
-                    </div>
-                    <div class="publication-links">
-                        <a href="#" class="publication-link">Paper</a>
-                        <a href="#" class="publication-link">Code</a>
-                    </div>
-                </div>
-
-                <div class="publication">
-                    <div class="publication-title">
-                        GUIDES: Guidance Using Instructor-Distilled Embeddings for Robot Policy Enhancement
-                    </div>
-                    <div class="publication-authors">
-                        Minquan Gao, <strong>Xiaojian Sun</strong>, Qing Yan, Xinyi Li, Xiaopan Zhang, Jiachen Li, Chien-Ming Huang
-                    </div>
-                    <div class="publication-venue">
-                        IEEE International Conference on Robotics and Automation (ICRA) 2026 • Under Review
-                    </div>
-                    <div class="publication-links">
-                        <a href="#" class="publication-link">Paper</a>
-                        <a href="#" class="publication-link">Video</a>
-                    </div>
-                </div>
-
-                <div class="publication">
-                    <div class="publication-title">
-                        Adaptive Teleoperation Motion Scaling Based on Human Performance Characterization
-                    </div>
-                    <div class="publication-authors">
-                        <strong>Xiaojian Sun</strong>, Kaichen Yu, Peter Kazanzides, Adnan Munawar
-                    </div>
-                    <div class="publication-venue">
-                        IEEE International Conference on Robotics and Automation (ICRA) 2026 • Under Review
-                    </div>
-                    <div class="publication-links">
-                        <a href="#" class="publication-link">Paper</a>
-                    </div>
-                </div>
-
-                <div class="publication">
-                    <div class="publication-title">
-                        BatVision: Regression-Calibrated Computer Vision Pipeline for Precise Equipment Analysis
-                    </div>
-                    <div class="publication-authors">
-                        <strong>Xiaojian Sun</strong>, Junlin Wu, Anton Dahbura
-                    </div>
-                    <div class="publication-venue">
-                        MIT Sloan Sports Analytics Conference (SSAC) 2026 • Under Review
-                    </div>
-                    <div class="publication-links">
-                        <a href="#" class="publication-link">Paper</a>
-                        <a href="#" class="publication-link">Demo</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experience" style="background: var(--bg-gray);">
-        <div class="container">
-            <div class="section-label">Career</div>
-            <h2 class="section-title">Experience</h2>
-            
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-date">Aug 2024 - Present</div>
-                    <div class="timeline-title">Research Lead</div>
-                    <div class="timeline-company">JHU Sports Analytics Research Group</div>
-                    <div class="timeline-description">
-                        Developing AI systems for NFL and MLB teams. Built RAG-LLM system for the Baltimore Ravens 
-                        and computer vision pipeline for the Baltimore Orioles.
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-date">Apr 2023 - May 2024</div>
-                    <div class="timeline-title">Robotics Research Assistant</div>
-                    <div class="timeline-company">UC Berkeley Biomimetic Millisystems Lab</div>
-                    <div class="timeline-description">
-                        Researched model-based learning for cooperative millirobot control. Achieved 100x improvement 
-                        in sample efficiency and 5x reduction in hardware costs.
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-date">Apr 2023 - Jan 2024</div>
-                    <div class="timeline-title">Research Intern</div>
-                    <div class="timeline-company">Berkeley AI Research Lab (BAIR)</div>
-                    <div class="timeline-description">
-                        Collaborated on combining optimal control and learning for visual navigation in novel environments.
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-date">Apr 2022 - May 2023</div>
-                    <div class="timeline-title">Vice President</div>
-                    <div class="timeline-company">Berkeley Chinese Students and Scholars Association</div>
-                    <div class="timeline-description">
-                        Led team of 40+, secured $80,000 in sponsorships (60% increase), organized events for 1500+ participants.
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-date">May 2021 - Jul 2021</div>
-                    <div class="timeline-title">Software Engineer Intern</div>
-                    <div class="timeline-company">Alibaba Cloud</div>
-                    <div class="timeline-description">
-                        Developed backend for AI-driven edge computing platform, reducing processing latency by 30%.
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Interests Section -->
-    <section id="interests">
-        <div class="container-wide">
-            <div class="section-label">Beyond Research</div>
-            <h2 class="section-title">Life</h2>
-            
-            <p class="text-center" style="max-width: 600px; margin: 0 auto 3rem;">
-                I believe diverse experiences enhance research creativity. My pursuits outside the lab teach 
-                patience, strategy, and perseverance—qualities essential for breakthrough discoveries.
-            </p>
-            
-            <div class="interests-grid">
-                <!-- Backpacking -->
-                <div class="interest-card">
-                    <div class="interest-icon">🏔️</div>
-                    <h3 class="interest-title">Backpacking & Photography</h3>
-                    <p class="interest-description">
-                        Multi-day wilderness expeditions through Yellowstone and the Sierra Nevada. 
-                        Recently completed 50+ miles through Yellowstone's backcountry, documenting diverse ecosystems.
-                    </p>
-                    
-                    <div class="photo-gallery">
-                        <div class="photo-item" onclick="openLightbox('yellowstone-1.jpg')">
-                            <img src="yellowstone-1.jpg" alt="Yellowstone landscape" loading="lazy">
-                        </div>
-                        <div class="photo-item" onclick="openLightbox('yellowstone-2.jpg')">
-                            <img src="yellowstone-2.jpg" alt="Backcountry camping" loading="lazy">
-                        </div>
-                        <div class="photo-item" onclick="openLightbox('yellowstone-3.jpg')">
-                            <img src="yellowstone-3.jpg" alt="Wildlife encounter" loading="lazy">
-                        </div>
-                        <div class="photo-item" onclick="openLightbox('yellowstone-4.jpg')">
-                            <img src="yellowstone-4.jpg" alt="Alpine reflection" loading="lazy">
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Water Polo -->
-                <div class="interest-card">
-                    <div class="interest-icon">💧</div>
-                    <h3 class="interest-title">Water Polo</h3>
-                    <p class="interest-description">
-                        Competitive club-level player for 5+ years. The sport's demand for split-second decisions 
-                        and team coordination directly parallels research collaboration.
-                    </p>
-                </div>
-
-                <!-- Music -->
-                <div class="interest-card">
-                    <div class="interest-icon">🎵</div>
-                    <h3 class="interest-title">Music & Technology</h3>
-                    <p class="interest-description">
-                        Berkeley Music degree holder exploring AI-augmented composition. Developed systems 
-                        like AIrish for traditional music generation.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" style="background: var(--bg-gray);">
-        <div class="container">
-            <div class="section-label">Get in Touch</div>
-            <h2 class="section-title">Contact</h2>
-            
-            <p class="text-center" style="max-width: 500px; margin: 0 auto 2rem;">
-                I'm always interested in discussing research collaborations, especially at the intersection 
-                of AI and human expertise.
-            </p>
-            
-            <div class="contact-grid">
-                <div class="contact-item">
-                    <div class="contact-icon">📧</div>
-                    <div class="contact-label">Email</div>
-                    <div class="contact-value">
-                        <a href="mailto:xsun90@jh.edu">xsun90@jh.edu</a>
-                    </div>
                 </div>
                 
-                <div class="contact-item">
-                    <div class="contact-icon">📍</div>
-                    <div class="contact-label">Location</div>
-                    <div class="contact-value">Baltimore, MD</div>
+                <!-- Quick Links -->
+                <div class="quick-links">
+                    <a href="mailto:xsun90@jh.edu" class="link-button">
+                        <i class="fas fa-envelope"></i> xsun90@jh.edu
+                    </a>
+                    <a href="https://github.com/luh-j" class="link-button">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                    <a href="https://scholar.google.com" class="link-button">
+                        <i class="fas fa-graduation-cap"></i> Scholar
+                    </a>
+                    <a href="https://linkedin.com/in/jxj-sun" class="link-button">
+                        <i class="fab fa-linkedin"></i> LinkedIn
+                    </a>
                 </div>
-                
-                <div class="contact-item">
-                    <div class="contact-icon">🏫</div>
-                    <div class="contact-label">Institution</div>
-                    <div class="contact-value">Johns Hopkins University</div>
+            </section>
+
+            <!-- Research Focus -->
+            <section class="content-section">
+                <div class="section-label">RESEARCH FOCUS</div>
+                <div class="focus-areas">
+                    <div class="focus-item">
+                        <h3>Culturally-Aware Foundation Models</h3>
+                        <p>
+                            Making vision-language models respect and represent diverse cultural perspectives, 
+                            moving beyond Western-centric biases in AI-generated content.
+                        </p>
+                    </div>
+                    <div class="focus-item">
+                        <h3>Human-AI Collaboration Systems</h3>
+                        <p>
+                            Developing agentic frameworks where AI augments domain expertise in high-stakes 
+                            environments like sports strategy and surgical procedures.
+                        </p>
+                    </div>
                 </div>
-            </div>
+            </section>
+
+            <!-- Current Affiliations -->
+            <section class="content-section">
+                <div class="section-label">CURRENT AFFILIATIONS</div>
+                <div class="affiliations">
+                    <div class="affiliation-item">
+                        <strong>Johns Hopkins University</strong><br>
+                        M.S.E. in Robotics • 2024-2026
+                    </div>
+                    <div class="affiliation-item">
+                        <strong>Research Lead</strong><br>
+                        JHU Sports Analytics Research Group
+                    </div>
+                    <div class="affiliation-item">
+                        <strong>Graduate Researcher</strong><br>
+                        CLSP, SMARTS Lab, Intuitive Computing Lab
+                    </div>
+                </div>
+            </section>
+
+            <!-- News -->
+            <section class="content-section">
+                <div class="section-label">NEWS</div>
+                <div class="news-list">
+                    <div class="news-item">
+                        <span class="news-date">Jan 2025</span>
+                        <span class="news-content">Four papers submitted to ICRA 2026 and MIT SSAC 2026</span>
+                    </div>
+                    <div class="news-item">
+                        <span class="news-date">Dec 2024</span>
+                        <span class="news-content">Ski lift safety system moving toward pilot deployment</span>
+                    </div>
+                    <div class="news-item">
+                        <span class="news-date">Nov 2024</span>
+                        <span class="news-content">Featured in New York Times article on AI in sports</span>
+                    </div>
+                    <div class="news-item">
+                        <span class="news-date">Aug 2024</span>
+                        <span class="news-content">Started M.S.E. in Robotics at Johns Hopkins University</span>
+                    </div>
+                </div>
+            </section>
         </div>
-    </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p class="footer-text">© 2025 Xiaojian Sun • Baltimore, MD</p>
+            <p>© 2025 Xiaojian Sun • Baltimore, MD</p>
         </div>
     </footer>
 
-    <!-- Lightbox -->
-    <div id="lightbox" class="lightbox" onclick="closeLightbox()" style="display: none;">
-        <span class="close" onclick="closeLightbox()">&times;</span>
-        <img id="lightbox-img" src="" alt="">
-    </div>
-
-    <!-- Minimal JavaScript -->
-    <script src="script_minimal.js"></script>
+    <script src="script_multipage_modern.js"></script>
 </body>
 </html>

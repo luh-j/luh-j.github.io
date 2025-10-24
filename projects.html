@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Jason Sun</title>
+    <meta name="description" content="Technical projects in AI, robotics, and software engineering.">
+    
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles_multipage.css">
+</head>
+<body>
+    
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">Jason Sun</a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="research.html" class="nav-link">Research</a>
+                <a href="industry.html" class="nav-link">Industry</a>
+                <a href="projects.html" class="nav-link active">Projects</a>
+                <a href="publications.html" class="nav-link">Publications</a>
+                <a href="cv.pdf" class="nav-link">CV</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container-wide">
+            <h1 class="page-title">Projects</h1>
+            
+            <!-- Featured Projects -->
+            <section class="content-section">
+                <div class="section-label">FEATURED PROJECTS</div>
+                
+                <div class="project-grid">
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3>NFL Scouting Intelligence System</h3>
+                            <span class="project-status">In Production</span>
+                        </div>
+                        <p class="project-description">
+                            On-premise RAG-LLM system for the Baltimore Ravens that processes 40,000+ articles on 2,000 
+                            prospects. Combines text-to-SQL with knowledge graphs for comprehensive player analysis.
+                        </p>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <strong>65%</strong>
+                                <span>Time Saved</span>
+                            </div>
+                            <div class="stat">
+                                <strong>40K+</strong>
+                                <span>Articles</span>
+                            </div>
+                            <div class="stat">
+                                <strong>2000</strong>
+                                <span>Players</span>
+                            </div>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-tag">LlamaIndex</span>
+                            <span class="tech-tag">Ollama</span>
+                            <span class="tech-tag">ChromaDB</span>
+                            <span class="tech-tag">Neo4j</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fas fa-file-alt"></i> Paper</a>
+                            <span class="project-link disabled"><i class="fas fa-lock"></i> Private</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3>Ski Lift Safety Vision System</h3>
+                            <span class="project-status">Pilot Phase</span>
+                        </div>
+                        <p class="project-description">
+                            Multi-person pose tracking pipeline using BoT-SORT with MediaPipe, achieving 95% tracking 
+                            accuracy in challenging snow conditions. System designed to reduce staffing by 33%.
+                        </p>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <strong>95%</strong>
+                                <span>Accuracy</span>
+                            </div>
+                            <div class="stat">
+                                <strong>30fps</strong>
+                                <span>Real-time</span>
+                            </div>
+                            <div class="stat">
+                                <strong>$50K</strong>
+                                <span>Funded</span>
+                            </div>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-tag">MediaPipe</span>
+                            <span class="tech-tag">BoT-SORT</span>
+                            <span class="tech-tag">OpenCV</span>
+                            <span class="tech-tag">PyTorch</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fas fa-video"></i> Demo</a>
+                            <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3>3D Generation with Segmentation Control</h3>
+                            <span class="project-status">Research</span>
+                        </div>
+                        <p class="project-description">
+                            Framework for lifting 2D image generation to 3D with segmentation control through text 
+                            prompts. Uses Gaussian Splatting to generate mesh/point clouds with object part classification.
+                        </p>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <strong>SOTA</strong>
+                                <span>Performance</span>
+                            </div>
+                            <div class="stat">
+                                <strong>Real-time</strong>
+                                <span>Rendering</span>
+                            </div>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-tag">Gaussian Splatting</span>
+                            <span class="tech-tag">Stable Diffusion</span>
+                            <span class="tech-tag">PyTorch3D</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/luh-j" class="project-link"><i class="fab fa-github"></i> Code</a>
+                            <a href="#" class="project-link"><i class="fas fa-file-pdf"></i> Report</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3>RoboReversi</h3>
+                            <span class="project-status">Completed</span>
+                        </div>
+                        <p class="project-description">
+                            Physical game-playing robot using Alpha-Beta Pruning Minimax strategy and deep learning 
+                            for piece identification. Achieved 98% win rate with Sawyer robot arm.
+                        </p>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <strong>98%</strong>
+                                <span>Win Rate</span>
+                            </div>
+                            <div class="stat">
+                                <strong>20%</strong>
+                                <span>Error Reduction</span>
+                            </div>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-tag">ROS</span>
+                            <span class="tech-tag">YOLO</span>
+                            <span class="tech-tag">MPC</span>
+                            <span class="tech-tag">Python</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/luh-j" class="project-link"><i class="fab fa-github"></i> Code</a>
+                            <a href="#" class="project-link"><i class="fas fa-video"></i> Video</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Other Projects -->
+            <section class="content-section">
+                <div class="section-label">OTHER PROJECTS</div>
+                
+                <div class="project-list">
+                    <div class="project-list-item">
+                        <div class="project-list-header">
+                            <h3>AIrish - Traditional Music Generation</h3>
+                            <div class="project-list-links">
+                                <a href="https://github.com/luh-j" class="text-link">GitHub</a>
+                                <a href="#" class="text-link">Demo</a>
+                            </div>
+                        </div>
+                        <p>
+                            LSTM-RNN model in PyTorch generating Traditional Irish music with 90% rhythmic accuracy. 
+                            Features adjustable temperature parameters for diverse generation.
+                        </p>
+                    </div>
+
+                    <div class="project-list-item">
+                        <div class="project-list-header">
+                            <h3>Autonomous Vehicle Trajectory Prediction</h3>
+                            <div class="project-list-links">
+                                <a href="#" class="text-link">Paper</a>
+                            </div>
+                        </div>
+                        <p>
+                            CARLA simulation environment integrating RoadRunner, SUMO, and OpenCDA. Developed parametric 
+                            trajectory prediction using MPC and TensorFlow, achieving 85% accuracy in urban scenarios.
+                        </p>
+                    </div>
+
+                    <div class="project-list-item">
+                        <div class="project-list-header">
+                            <h3>BatVision - Baseball Equipment Analysis</h3>
+                            <div class="project-list-links">
+                                <a href="#" class="text-link">Paper</a>
+                                <span class="text-muted">Private</span>
+                            </div>
+                        </div>
+                        <p>
+                            Computer vision pipeline for the Baltimore Orioles using regression-calibrated deep learning 
+                            to measure baseball bat dimensions with sub-millimeter precision.
+                        </p>
+                    </div>
+
+                    <div class="project-list-item">
+                        <div class="project-list-header">
+                            <h3>Gitlet - Version Control System</h3>
+                            <div class="project-list-links">
+                                <a href="https://github.com/luh-j" class="text-link">GitHub</a>
+                            </div>
+                        </div>
+                        <p>
+                            Full implementation of Git in Java, supporting commits, branching, merging, and remote 
+                            functionality. Uses cryptographic hashing and graph traversal algorithms.
+                        </p>
+                    </div>
+
+                    <div class="project-list-item">
+                        <div class="project-list-header">
+                            <h3>Dynamic Audio-Visual Concert System</h3>
+                            <div class="project-list-links">
+                                <a href="#" class="text-link">Video</a>
+                            </div>
+                        </div>
+                        <p>
+                            Real-time video generation using stable diffusion synchronized with live music analysis. 
+                            Performed at Berkeley concert venue with dynamic AI-generated visuals.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Open Source Contributions -->
+            <section class="content-section">
+                <div class="section-label">OPEN SOURCE</div>
+                
+                <div class="opensource-grid">
+                    <a href="https://github.com/luh-j" class="opensource-card">
+                        <i class="fab fa-github"></i>
+                        <div class="opensource-stats">
+                            <strong>50+</strong>
+                            <span>Repositories</span>
+                        </div>
+                    </a>
+                    <a href="#" class="opensource-card">
+                        <i class="fas fa-code-branch"></i>
+                        <div class="opensource-stats">
+                            <strong>200+</strong>
+                            <span>Contributions</span>
+                        </div>
+                    </a>
+                    <a href="#" class="opensource-card">
+                        <i class="fas fa-star"></i>
+                        <div class="opensource-stats">
+                            <strong>100+</strong>
+                            <span>Stars</span>
+                        </div>
+                    </a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2025 Xiaojian Sun • Baltimore, MD</p>
+        </div>
+    </footer>
+
+    <script src="script_multipage.js"></script>
+</body>
+</html>
