@@ -1,287 +1,289 @@
 // ========================================
-// Mobile Navigation Toggle
+// Minimal Academic Portfolio
+// Subtle, smooth interactions inspired by stellalisy.com
 // ========================================
 
-document.addEventListener('DOMContentLoaded', function() {
-    const navToggle = document.getElementById('navToggle');
-    const navMenu = document.getElementById('navMenu');
-    const navLinks = document.querySelectorAll('.nav-link');
+(function() {
+    'use strict';
+
+    // ========================================
+    // Smooth Navigation
+    // ========================================
     
-    // Toggle mobile menu
-    navToggle.addEventListener('click', function() {
-        navMenu.classList.toggle('active');
+    const nav = document.querySelector('.nav');
+    const navLinks = document.querySelectorAll('.nav-link');
+    let lastScrollY = window.scrollY;
+    let ticking = false;
+    
+    // Update navigation on scroll
+    function updateNav() {
+        const currentScrollY = window.scrollY;
         
-        // Animate hamburger menu
-        navToggle.classList.toggle('active');
-    });
+        // Add subtle shadow on scroll
+        if (currentScrollY > 10) {
+            nav.style.borderBottom = '1px solid #e0e0e0';
+            nav.style.boxShadow = '0 1px 3px rgba(0, 0, 0, 0.05)';
+        } else {
+            nav.style.borderBottom = '1px solid #eeeeee';
+            nav.style.boxShadow = 'none';
+        }
+        
+        lastScrollY = currentScrollY;
+        ticking = false;
+    }
     
-    // Close mobile menu when clicking a link
-    navLinks.forEach(link => {
-        link.addEventListener('click', function() {
-            navMenu.classList.remove('active');
-            navToggle.classList.remove('active');
-        });
-    });
-    
-    // Close mobile menu when clicking outside
-    document.addEventListener('click', function(event) {
-        if (!navToggle.contains(event.target) && !navMenu.contains(event.target)) {
-            navMenu.classList.remove('active');
-            navToggle.classList.remove('active');
+    // Throttle scroll events
+    window.addEventListener('scroll', function() {
+        if (!ticking) {
+            window.requestAnimationFrame(updateNav);
+            ticking = true;
         }
     });
-});
-
-// ========================================
-// Smooth Scroll with Active Link Highlighting
-// ========================================
-
-document.addEventListener('DOMContentLoaded', function() {
+    
+    // ========================================
+    // Active Section Highlighting
+    // ========================================
+    
     const sections = document.querySelectorAll('section[id]');
-    const navLinks = document.querySelectorAll('.nav-link');
     
-    // Function to remove active class from all links
-    function removeActiveClasses() {
-        navLinks.forEach(link => {
-            link.classList.remove('active');
+    function highlightNavigation() {
+        const scrollPosition = window.scrollY + 100;
+        
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.offsetHeight;
+            const sectionId = section.getAttribute('id');
+            
+            if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === `#${sectionId}`) {
+                        link.classList.add('active');
+                    }
+                });
+            }
         });
     }
     
-    // Function to add active class to current section link
-    function addActiveClass(id) {
-        removeActiveClasses();
-        const activeLink = document.querySelector(`.nav-link[href="#${id}"]`);
-        if (activeLink) {
-            activeLink.classList.add('active');
-        }
-    }
+    window.addEventListener('scroll', highlightNavigation);
+    window.addEventListener('load', highlightNavigation);
     
-    // Intersection Observer for section highlighting
+    // ========================================
+    // Smooth Scrolling
+    // ========================================
+    
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            const targetSection = document.querySelector(targetId);
+            
+            if (targetSection) {
+                const offsetTop = targetSection.offsetTop - 80;
+                window.scrollTo({
+                    top: offsetTop,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+    
+    // ========================================
+    // Fade In on Scroll
+    // ========================================
+    
     const observerOptions = {
-        rootMargin: '-20% 0px -70% 0px',
-        threshold: 0
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
     };
     
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                addActiveClass(entry.target.id);
+                entry.target.style.opacity = '0';
+                entry.target.style.transform = 'translateY(20px)';
+                
+                setTimeout(() => {
+                    entry.target.style.transition = 'all 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }, 100);
+                
+                observer.unobserve(entry.target);
             }
         });
     }, observerOptions);
     
-    sections.forEach(section => {
-        observer.observe(section);
+    // Observe elements
+    document.querySelectorAll('.project-card, .publication, .timeline-item, .interest-card').forEach(el => {
+        observer.observe(el);
     });
-});
-
-// ========================================
-// Navbar Scroll Effect
-// ========================================
-
-let lastScrollY = window.scrollY;
-const navbar = document.querySelector('.navbar');
-
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 100) {
-        navbar.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
-        navbar.style.backgroundColor = 'rgba(255, 255, 255, 0.98)';
-    } else {
-        navbar.style.boxShadow = '0 1px 3px rgba(0, 0, 0, 0.05)';
-        navbar.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
-    }
     
-    // Hide/show navbar on scroll (optional)
-    if (window.scrollY > lastScrollY && window.scrollY > 300) {
-        // Scrolling down
-        navbar.style.transform = 'translateY(-100%)';
-    } else {
-        // Scrolling up
-        navbar.style.transform = 'translateY(0)';
-    }
+    // ========================================
+    // Minimal Card Interactions
+    // ========================================
     
-    lastScrollY = window.scrollY;
-});
-
-// ========================================
-// Fade In Animation on Scroll
-// ========================================
-
-document.addEventListener('DOMContentLoaded', function() {
-    const fadeElements = document.querySelectorAll('.research-card, .publication, .timeline-item, .news-item');
+    const projectCards = document.querySelectorAll('.project-card');
     
-    const fadeInOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
-    
-    const fadeInObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('fade-in');
-                fadeInObserver.unobserve(entry.target);
-            }
-        });
-    }, fadeInOptions);
-    
-    fadeElements.forEach(element => {
-        fadeInObserver.observe(element);
-    });
-});
-
-// ========================================
-// Dynamic Year Update
-// ========================================
-
-document.addEventListener('DOMContentLoaded', function() {
-    const yearElements = document.querySelectorAll('.current-year');
-    const currentYear = new Date().getFullYear();
-    
-    yearElements.forEach(element => {
-        element.textContent = currentYear;
-    });
-});
-
-// ========================================
-// Research Card Hover Effects
-// ========================================
-
-document.addEventListener('DOMContentLoaded', function() {
-    const researchCards = document.querySelectorAll('.research-card');
-    
-    researchCards.forEach(card => {
-        card.addEventListener('mouseenter', function(e) {
-            const rect = card.getBoundingClientRect();
+    projectCards.forEach(card => {
+        // Add subtle hover effect with mouse position
+        card.addEventListener('mousemove', function(e) {
+            const rect = this.getBoundingClientRect();
             const x = e.clientX - rect.left;
             const y = e.clientY - rect.top;
             
-            card.style.background = `
-                radial-gradient(
-                    circle at ${x}px ${y}px,
-                    rgba(0, 102, 204, 0.05),
-                    transparent
-                )
-            `;
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+            
+            const rotateX = (y - centerY) / 20;
+            const rotateY = (centerX - x) / 20;
+            
+            this.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateZ(10px)`;
         });
         
         card.addEventListener('mouseleave', function() {
-            card.style.background = '';
+            this.style.transform = '';
         });
     });
-});
-
-// ========================================
-// Smooth Anchor Scrolling
-// ========================================
-
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            const offset = 80; // Account for fixed navbar
-            const targetPosition = target.offsetTop - offset;
+    
+    // ========================================
+    // Photo Gallery Lightbox
+    // ========================================
+    
+    window.openLightbox = function(src) {
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        
+        if (lightbox && lightboxImg) {
+            lightboxImg.src = src;
+            lightbox.style.display = 'flex';
+            lightbox.style.alignItems = 'center';
+            lightbox.style.justifyContent = 'center';
+            lightbox.style.position = 'fixed';
+            lightbox.style.top = '0';
+            lightbox.style.left = '0';
+            lightbox.style.width = '100%';
+            lightbox.style.height = '100%';
+            lightbox.style.backgroundColor = 'rgba(0, 0, 0, 0.95)';
+            lightbox.style.zIndex = '9999';
+            lightbox.style.cursor = 'pointer';
             
-            window.scrollTo({
-                top: targetPosition,
-                behavior: 'smooth'
-            });
+            // Fade in
+            lightbox.style.opacity = '0';
+            setTimeout(() => {
+                lightbox.style.transition = 'opacity 0.3s ease';
+                lightbox.style.opacity = '1';
+            }, 10);
+            
+            document.body.style.overflow = 'hidden';
+        }
+    };
+    
+    window.closeLightbox = function() {
+        const lightbox = document.getElementById('lightbox');
+        
+        if (lightbox) {
+            lightbox.style.opacity = '0';
+            setTimeout(() => {
+                lightbox.style.display = 'none';
+                lightbox.style.opacity = '';
+            }, 300);
+            
+            document.body.style.overflow = '';
+        }
+    };
+    
+    // Close lightbox with ESC key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            closeLightbox();
         }
     });
-});
-
-// ========================================
-// Publication Links Copy Citation
-// ========================================
-
-document.addEventListener('DOMContentLoaded', function() {
-    // Add copy citation functionality
-    const publications = [
-        {
-            id: 1,
-            bibtex: `@inproceedings{sun2026chaos,
-  title={From Chaos to Clarity: AI-Driven News Intelligence for NFL Front Offices},
-  author={Sun, Xiaojian and Indukuri, Siva and Albayrak, Nahuel and Chen, Joyce and Murray, Kenton and Dahbura, Anton and Berkery, Tad},
-  booktitle={MIT Sloan Sports Analytics Conference},
-  year={2026}
-}`
-        },
-        {
-            id: 2,
-            bibtex: `@inproceedings{gao2026guides,
-  title={GUIDES: Guidance Using Instructor-Distilled Embeddings for Robot Policy Enhancement},
-  author={Gao, Minquan and Sun, Xiaojian and Yan, Qing and Li, Xinyi and Zhang, Xiaopan and Li, Jiachen and Huang, Chien-Ming},
-  booktitle={IEEE International Conference on Robotics and Automation},
-  year={2026}
-}`
-        },
-        {
-            id: 3,
-            bibtex: `@inproceedings{sun2026adaptive,
-  title={Adaptive Teleoperation Motion Scaling Based on Human Performance Characterization},
-  author={Sun, Xiaojian and Yu, Kaichen and Kazanzides, Peter and Munawar, Adnan},
-  booktitle={IEEE International Conference on Robotics and Automation},
-  year={2026}
-}`
-        },
-        {
-            id: 4,
-            bibtex: `@inproceedings{sun2026batvision,
-  title={BatVision: Regression-Calibrated Computer Vision Pipeline for Precise Equipment Analysis},
-  author={Sun, Xiaojian and Wu, Junlin and Dahbura, Anton},
-  booktitle={MIT Sloan Sports Analytics Conference},
-  year={2026}
-}`
-        }
-    ];
     
-    // You can add citation copy functionality here if needed
-});
-
-// ========================================
-// Console Messages
-// ========================================
-
-console.log('Welcome to my website!');
-console.log('I am always open to research collaborations and interesting discussions about AI and human expertise.');
-console.log('Feel free to reach out at xsun90@jh.edu');
-
-// ========================================
-// Performance Optimization
-// ========================================
-
-// Debounce function for scroll events
-function debounce(func, wait) {
-    let timeout;
-    return function executedFunction(...args) {
-        const later = () => {
+    // ========================================
+    // Subtle Link Animations
+    // ========================================
+    
+    const textLinks = document.querySelectorAll('.text-link');
+    
+    textLinks.forEach(link => {
+        link.addEventListener('mouseenter', function() {
+            this.style.color = 'var(--accent-blue)';
+        });
+        
+        link.addEventListener('mouseleave', function() {
+            this.style.color = '';
+        });
+    });
+    
+    // ========================================
+    // Performance Optimization
+    // ========================================
+    
+    // Debounce function
+    function debounce(func, wait) {
+        let timeout;
+        return function executedFunction(...args) {
+            const later = () => {
+                clearTimeout(timeout);
+                func(...args);
+            };
             clearTimeout(timeout);
-            func(...args);
+            timeout = setTimeout(later, wait);
         };
-        clearTimeout(timeout);
-        timeout = setTimeout(later, wait);
-    };
-}
-
-// Throttle function for resize events
-function throttle(func, limit) {
-    let inThrottle;
-    return function() {
-        const args = arguments;
-        const context = this;
-        if (!inThrottle) {
-            func.apply(context, args);
-            inThrottle = true;
-            setTimeout(() => inThrottle = false, limit);
-        }
-    };
-}
-
-// Apply optimization to scroll and resize events
-window.addEventListener('scroll', debounce(() => {
-    // Scroll-based animations
-}, 10));
-
-window.addEventListener('resize', throttle(() => {
-    // Resize-based adjustments
-}, 200));
+    }
+    
+    // Optimize resize events
+    window.addEventListener('resize', debounce(() => {
+        // Handle any resize-dependent functionality
+    }, 250));
+    
+    // ========================================
+    // Page Load Animations
+    // ========================================
+    
+    window.addEventListener('load', function() {
+        // Animate hero content on load
+        const heroElements = document.querySelectorAll('.hero-name, .hero-title, .hero-description, .hero-links');
+        
+        heroElements.forEach((element, index) => {
+            element.style.opacity = '0';
+            element.style.transform = 'translateY(20px)';
+            
+            setTimeout(() => {
+                element.style.transition = 'all 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
+                element.style.opacity = '1';
+                element.style.transform = 'translateY(0)';
+            }, index * 100);
+        });
+    });
+    
+    // ========================================
+    // Mobile Menu (if needed)
+    // ========================================
+    
+    const navToggle = document.querySelector('.nav-toggle');
+    const navLinksContainer = document.querySelector('.nav-links');
+    
+    if (navToggle) {
+        navToggle.addEventListener('click', function() {
+            navLinksContainer.classList.toggle('active');
+        });
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!navToggle.contains(e.target) && !navLinksContainer.contains(e.target)) {
+                navLinksContainer.classList.remove('active');
+            }
+        });
+    }
+    
+    // ========================================
+    // Console Message
+    // ========================================
+    
+    console.log('%c Jason Sun ', 'background: #000; color: #fff; padding: 5px 10px; font-size: 14px; font-weight: bold;');
+    console.log('Building AI systems that amplify human expertise.');
+    console.log('Get in touch: xsun90@jh.edu');
+    
+})();
