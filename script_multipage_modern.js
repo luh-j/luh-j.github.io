@@ -77,27 +77,72 @@
         }
     });
     
-    // Active page highlighting with animation
-    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    // Active section highlighting for single-page navigation
     const navLinks = document.querySelectorAll('.nav-link');
-    
+    const sections = document.querySelectorAll('section[id]');
+
+    // Smooth scroll for anchor links
     navLinks.forEach(link => {
         const href = link.getAttribute('href');
-        if (href === currentPage) {
-            link.classList.add('active');
-            // Add pulse animation to active link
-            link.style.animation = 'pulse 2s ease infinite';
+
+        // Only handle anchor links (starting with #)
+        if (href && href.startsWith('#')) {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = href.substring(1);
+                const targetSection = document.getElementById(targetId);
+
+                if (targetSection) {
+                    targetSection.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+
+                    // Update URL without jumping
+                    history.pushState(null, null, href);
+                }
+            });
         }
-        
-        // Add hover sound effect (optional)
+
+        // Add hover effects
         link.addEventListener('mouseenter', function() {
             this.style.transform = 'scale(1.05)';
         });
-        
+
         link.addEventListener('mouseleave', function() {
             this.style.transform = 'scale(1)';
         });
     });
+
+    // Highlight active section on scroll
+    function highlightActiveSection() {
+        let current = '';
+        const scrollPosition = window.pageYOffset + 150;
+
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+
+            if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                current = section.getAttribute('id');
+            }
+        });
+
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            const href = link.getAttribute('href');
+
+            if (href === `#${current}`) {
+                link.classList.add('active');
+            }
+        });
+    }
+
+    // Call on scroll
+    window.addEventListener('scroll', highlightActiveSection);
+
+    // Call on page load
+    highlightActiveSection();
 
     // ========================================
     // Card Interactions with 3D Effects
@@ -417,20 +462,23 @@
     });
 
     // ========================================
-    // Smooth Page Transitions
+    // Smooth Page Transitions (for external pages like CV)
     // ========================================
-    
-    document.querySelectorAll('a[href$=".html"]').forEach(link => {
+
+    document.querySelectorAll('a[href$=".html"]:not([href^="#"])').forEach(link => {
         link.addEventListener('click', function(e) {
-            e.preventDefault();
             const href = this.getAttribute('href');
-            
-            document.body.style.opacity = '0';
-            document.body.style.transition = 'opacity 0.3s ease';
-            
-            setTimeout(() => {
-                window.location.href = href;
-            }, 300);
+
+            // Don't apply transition for anchor links
+            if (!href.startsWith('#')) {
+                e.preventDefault();
+                document.body.style.opacity = '0';
+                document.body.style.transition = 'opacity 0.3s ease';
+
+                setTimeout(() => {
+                    window.location.href = href;
+                }, 300);
+            }
         });
     });
 
