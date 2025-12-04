@@ -379,7 +379,7 @@
   year={2026}
 }`,
         'sun2026batvision': `@inproceedings{sun2026batvision,
-  title={BatVision: Regression-Calibrated Computer Vision Pipeline for Precise Equipment Analysis},
+  title={BatVision: Regression-Calibrated Single-View Computer Vision Pipeline for Precise Baseball Bat Analysis and Quality Control},
   author={Sun, Xiaojian and Wu, Junlin and Dahbura, Anton},
   booktitle={MIT Sloan Sports Analytics Conference},
   year={2026}
