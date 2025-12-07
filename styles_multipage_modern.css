@@ -660,6 +660,55 @@ a:hover {
 }
 
 /* ========================================
+   Affiliation Logo Section
+   ======================================== */
+
+.logo-section {
+    padding: var(--space-lg) 0;
+    margin-bottom: var(--space-lg);
+}
+
+.logo-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--space-2xl);
+    flex-wrap: wrap;
+}
+
+.logo-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition-base);
+}
+
+.logo-item img {
+    height: 50px;
+    width: auto;
+    object-fit: contain;
+    filter: grayscale(100%);
+    opacity: 0.6;
+    transition: var(--transition-base);
+}
+
+.logo-item:hover img {
+    filter: grayscale(0%);
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .logo-row {
+        gap: var(--space-lg);
+    }
+
+    .logo-item img {
+        height: 40px;
+    }
+}
+
+/* ========================================
    Research Page - Modern Cards
    ======================================== */
 
