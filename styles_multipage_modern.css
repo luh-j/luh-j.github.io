@@ -462,14 +462,14 @@ a:hover {
    ======================================== */
 
 .section-label {
-    font-size: 0.75rem;
+    font-size: 1.25rem;
     font-weight: 700;
-    letter-spacing: 0.2em;
+    letter-spacing: 0.15em;
     text-transform: uppercase;
     color: var(--primary);
     margin-bottom: var(--space-lg);
     display: inline-block;
-    padding: 4px 12px;
+    padding: 6px 16px;
     background: var(--primary-light);
     border-radius: var(--radius-sm);
 }
