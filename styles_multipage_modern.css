@@ -462,14 +462,14 @@ a:hover {
    ======================================== */
 
 .section-label {
-    font-size: 1.25rem;
+    font-size: 1rem;
     font-weight: 700;
     letter-spacing: 0.15em;
     text-transform: uppercase;
     color: var(--primary);
     margin-bottom: var(--space-lg);
     display: inline-block;
-    padding: 6px 16px;
+    padding: 5px 14px;
     background: var(--primary-light);
     border-radius: var(--radius-sm);
 }
@@ -665,10 +665,36 @@ a:hover {
    Affiliation Logo Section
    ======================================== */
 
+/* ========================================
+   Section Jump Menu
+   ======================================== */
+
+.section-nav {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-bottom: var(--space-md);
+}
+
+.section-nav a {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-md);
+    transition: var(--transition-base);
+}
+
+.section-nav a:hover {
+    color: var(--primary);
+    background: var(--primary-light);
+}
+
 .logo-section {
     padding: 0;
     margin: 0;
-    margin-top: -2rem;
+    margin-top: -1rem;
 }
 
 .logo-row {
