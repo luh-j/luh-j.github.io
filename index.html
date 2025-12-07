@@ -190,7 +190,7 @@
                         <strong style="font-size: 1.05rem;">From Chaos to Clarity: AI-Driven News Intelligence for NFL Front Offices</strong>
                     </div>
                     <div style="color: #666; margin-bottom: 0.5rem;">
-                        <strong>Xiaojian Sun</strong>*, Siva Indukuri, Nahuel Albayrak, Joyce Chen, Kenton Murray, Anton Dahbura, Tad Berkery
+                        <strong>Xiaojian Sun</strong>*, Tad Berkery, Anton Dahbura, Kenton Murray, Siva Indukuri, Nahuel Albayrak, Joyce Chen
                     </div>
                     <div style="color: #888; font-size: 0.9rem; margin-bottom: 0.75rem;">
                         <em>MIT SSAC 2026 (Abstract Accepted)</em>
@@ -337,5 +337,35 @@
     </footer>
 
     <script src="script_multipage_modern.js"></script>
+    <script>
+        // Dynamic sidebar navigation - highlight active section on scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.sidebar-nav a');
+
+            function updateActiveLink() {
+                let currentSection = '';
+
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop - 150;
+                    const sectionHeight = section.offsetHeight;
+
+                    if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+                        currentSection = section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === '#' + currentSection) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+
+            window.addEventListener('scroll', updateActiveLink);
+            updateActiveLink();
+        });
+    </script>
 </body>
 </html>
