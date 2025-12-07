@@ -664,8 +664,8 @@ a:hover {
    ======================================== */
 
 .logo-section {
-    padding: var(--space-lg) 0;
-    margin-bottom: var(--space-lg);
+    padding: var(--space-sm) 0;
+    margin-bottom: var(--space-sm);
 }
 
 .logo-row {
@@ -684,7 +684,7 @@ a:hover {
 }
 
 .logo-item img {
-    height: 80px;
+    height: 100px;
     width: auto;
     object-fit: contain;
     transition: var(--transition-base);
@@ -700,7 +700,7 @@ a:hover {
     }
 
     .logo-item img {
-        height: 60px;
+        height: 70px;
     }
 }
 
