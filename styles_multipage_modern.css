@@ -684,17 +684,13 @@ a:hover {
 }
 
 .logo-item img {
-    height: 50px;
+    height: 80px;
     width: auto;
     object-fit: contain;
-    filter: grayscale(100%);
-    opacity: 0.6;
     transition: var(--transition-base);
 }
 
 .logo-item:hover img {
-    filter: grayscale(0%);
-    opacity: 1;
     transform: scale(1.1);
 }
 
@@ -704,7 +700,7 @@ a:hover {
     }
 
     .logo-item img {
-        height: 40px;
+        height: 60px;
     }
 }
 
