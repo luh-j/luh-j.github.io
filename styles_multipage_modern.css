@@ -684,7 +684,7 @@ a:hover {
 }
 
 .logo-item img {
-    height: 120px;
+    height: 100px;
     width: auto;
     object-fit: contain;
     transition: var(--transition-base);
