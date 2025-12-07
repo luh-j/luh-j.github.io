@@ -684,7 +684,7 @@ a:hover {
 }
 
 .logo-item img {
-    height: 200px;
+    height: 150px;
     width: auto;
     object-fit: contain;
     transition: var(--transition-base);
@@ -700,7 +700,7 @@ a:hover {
     }
 
     .logo-item img {
-        height: 120px;
+        height: 100px;
     }
 }
 
