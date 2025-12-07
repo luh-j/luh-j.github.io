@@ -664,8 +664,8 @@ a:hover {
    ======================================== */
 
 .logo-section {
-    padding: var(--space-sm) 0;
-    margin-bottom: var(--space-sm);
+    padding: 0;
+    margin: 0;
 }
 
 .logo-row {
