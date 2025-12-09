@@ -198,7 +198,7 @@ a:hover {
 }
 
 .nav-brand {
-    font-size: 1.25rem;
+    font-size: 1.4rem;
     font-weight: 700;
     background: var(--accent-gradient);
     -webkit-background-clip: text;
@@ -213,6 +213,7 @@ a:hover {
 
 .nav-link {
     color: var(--text-secondary);
+    font-size: 1.1rem;
     font-weight: 500;
     padding: 0.5rem 1rem;
     border-radius: var(--radius-md);
