@@ -375,7 +375,7 @@
         'sun2026adaptive': `@inproceedings{sun2026adaptive,
   title={Adaptive Teleoperation Motion Scaling Based on Human Performance Characterization},
   author={Sun, Xiaojian and Yu, Kaichen and Kazanzides, Peter and Munawar, Adnan},
-  booktitle={IEEE International Conference on Robotics and Automation},
+  booktitle={IEEE/RSJ International Conference on Intelligent Robots and Systems},
   year={2026}
 }`,
         'sun2026batvision': `@inproceedings{sun2026batvision,
