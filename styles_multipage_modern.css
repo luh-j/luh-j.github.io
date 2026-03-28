@@ -1306,7 +1306,7 @@ a:hover {
 
 .project-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: var(--space-lg);
 }
 
@@ -1361,13 +1361,25 @@ a:hover {
     display: flex;
     gap: 0.4rem;
     flex-wrap: wrap;
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.5rem;
 }
 
 .project-card-links {
     display: flex;
     gap: 0.5rem;
     flex-wrap: wrap;
+}
+
+.container-projects {
+    max-width: var(--container-wide);
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+@media (max-width: 1100px) {
+    .project-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 /* ========================================
