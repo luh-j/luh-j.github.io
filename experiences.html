@@ -61,7 +61,7 @@
                 <div class="exp-item" style="margin-bottom: 2rem;">
                     <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.5rem;">
                         <div>
-                            <h3 style="margin: 0; font-size: 1.1rem;">Technical Director and Research Lead</h3>
+                            <h3 style="margin: 0; font-size: 1.1rem;">Technical Director</h3>
                             <div style="color: #666; margin-top: 0.25rem;">JHU Sports Analytics Research Group (SARG)</div>
                             <div style="color: #888; font-size: 0.9rem; margin-top: 0.25rem;">Advisor: Prof. Anton Dahbura</div>
                         </div>
@@ -73,11 +73,28 @@
                         <span style="padding: 3px 10px; background: #e0e7ff; color: #3730a3; border-radius: 12px; font-size: 0.8rem; font-weight: 500;">RAG</span>
                         <span style="padding: 3px 10px; background: #dcfce7; color: #166534; border-radius: 12px; font-size: 0.8rem; font-weight: 500;">Computer Vision</span>
                     </div>
-                    <ul style="margin-top: 0.75rem; color: #555; font-size: 0.95rem;">
-                        <li>Directed development of an on-premise decision support system for NFL scouts, building end-to-end RAG pipelines with text-to-SQL achieving 80% top-1 retrieval accuracy (NDCG@5: 0.93) across 40,000+ articles covering 2,000 prospects. Deployed 6 task-specific agents with self-reflection and citation verification, reducing daily prospect monitoring from 2+ hours to minutes</li>
-                        <li>Led 30+ engineers in building a production multi-agent system for RotoWire, enabling sports organizations to deploy domain-specific AI agents for performance analysis, waiver evaluation, fantasy projections, and injury assessment with multimodal inputs</li>
-                        <li>Pioneered BatVision, a smartphone-based computer vision system for the Baltimore Orioles under Sig Mejdal (VP & Assistant GM), replacing manual calipers with 0.148mm accuracy at 180× speed. Filed as U.S. Provisional Patent</li>
-                        <li>Developing computer vision system for ski resort safety operations, achieving 95% tracking accuracy with potential to save $20M+ annually across North American ski industry</li>
+
+                    <div style="margin-top: 0.75rem; margin-bottom: 0.5rem;">
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <div style="font-weight: 600; font-size: 0.95rem; color: #444;">RotoWire Sports AI Agent Ecosystem</div>
+                            <div style="color: #888; font-size: 0.85rem; white-space: nowrap;">Dec. 2025 - Present</div>
+                        </div>
+                        <div style="color: #888; font-size: 0.85rem;">Python, AWS, vLLM, LoRA, pgvector</div>
+                    </div>
+                    <ul style="margin-top: 0.5rem; color: #555; font-size: 0.95rem;">
+                        <li>Led 30+ engineers in building a production multi-agent system powered by a multi-agent planner that enables sports organizations to deploy domain-specific AI agents for complex reasoning — including performance analysis, waiver evaluation, fantasy projections, injury assessment, and fact-checking — with multimodal inputs (text, structured data, video, audio) and privacy-preserving on-premise inference. Deployed on AWS with LoRA fine-tuning and pgvector semantic search, serving professional sports teams, established analytics partners, and league-affiliated organizations across multiple sports</li>
+                        <li>Architected component registry with secure tool connectors (MCP-style patterns) and reasoning tracers, enabling agent composition through declarative reasoning skills and tool-calling patterns. Built evaluation harness with citation tracking and source verification across all agent outputs, reducing agent development from 3 months to under 2 hours</li>
+                    </ul>
+
+                    <div style="margin-top: 1rem; margin-bottom: 0.5rem;">
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <div style="font-weight: 600; font-size: 0.95rem; color: #444;">NFL Intelligence System</div>
+                            <div style="color: #888; font-size: 0.85rem; white-space: nowrap;">Aug. 2024 - Dec. 2025</div>
+                        </div>
+                        <div style="color: #888; font-size: 0.85rem;">Python, Langchain, vLLM, PostgreSQL, pgvector</div>
+                    </div>
+                    <ul style="margin-top: 0.5rem; color: #555; font-size: 0.95rem;">
+                        <li>Directed development of an on-premise decision support system that helps NFL scouts research prospects for off-field analysis by automatically retrieving, synthesizing, and reasoning over scouting data. Built end-to-end RAG pipelines (ingestion, chunking, embedding, retrieval, generation) with text-to-SQL and structured outputs utilizing LangChain, LangGraph and LlamaIndex, achieving 80% top-1 retrieval accuracy (NDCG@5: 0.93) across 40,000+ articles covering 2,000 prospects. Deployed 6 task-specific agents with self-reflection and citation verification, reducing daily prospect monitoring from 2+ hours to minutes; validated against evaluations from NFL expert scouts</li>
                     </ul>
                 </div>
 
@@ -196,7 +213,8 @@
                     <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.5rem;">
                         <div>
                             <h3 style="margin: 0; font-size: 1.1rem;">Applied AI Engineer</h3>
-                            <div style="color: #666; margin-top: 0.25rem;"><a href="https://www.baltimoreravens.com/" target="_blank" style="color: #666; text-decoration: none;">Baltimore Ravens</a> - Department of R&D</div>
+                            <div style="color: #666; margin-top: 0.25rem;"><a href="https://www.baltimoreravens.com/" target="_blank" style="color: #666; text-decoration: none;">Baltimore Ravens</a> - R&D Department</div>
+                            <div style="color: #888; font-size: 0.9rem; margin-top: 0.25rem;">Supervisor: David McDonald, VP of Research & Development</div>
                         </div>
                         <div style="color: #888; font-size: 0.9rem; white-space: nowrap;">Aug. 2024 - Dec. 2025</div>
                     </div>
@@ -206,9 +224,26 @@
                         <span style="padding: 3px 10px; background: #e0e7ff; color: #3730a3; border-radius: 12px; font-size: 0.8rem; font-weight: 500;">RAG</span>
                     </div>
                     <ul style="margin-top: 0.75rem; color: #555; font-size: 0.95rem;">
-                        <li>Designed and shipped a production LLM-powered product for Player Personnel, building agentic workflows for multi-step research, analysis, and report generation over 15,000+ player profiles and 50,000+ scouting articles, reducing research time by 90%</li>
-                        <li>Developed automated scout report system with agentic RAG and human-in-the-loop approvals, implementing secure tool and data connectors with access control and audit logging</li>
-                        <li>Deployed to 30+ end users across scouting and analytics departments, increasing evaluation capacity by 43%</li>
+                        <li>Designed and shipped a production LLM-powered product for Player Personnel, building agentic workflows for multi-step research, analysis, and report generation over 15,000+ player profiles and 50,000+ scouting articles. Partnered with scouts, analysts, and front office stakeholders to deliver measurable impact, reducing research time by 90%</li>
+                        <li>Developed automated scout report system with agentic RAG and human-in-the-loop approvals, implementing secure tool and data connectors with access control, audit logging, and data boundaries. Built reusable components enabling AI capabilities to scale across teams. Deployed to 30+ end users, increasing evaluation capacity by 43%</li>
+                    </ul>
+                </div>
+
+                <div class="exp-item" style="margin-bottom: 2rem;">
+                    <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.5rem;">
+                        <div>
+                            <h3 style="margin: 0; font-size: 1.1rem;">Computer Vision Engineer</h3>
+                            <div style="color: #666; margin-top: 0.25rem;">Baltimore Orioles</div>
+                            <div style="color: #888; font-size: 0.9rem; margin-top: 0.25rem;">Advisor: Sig Mejdal, VP & Assistant GM</div>
+                        </div>
+                        <div style="color: #888; font-size: 0.9rem; white-space: nowrap;">Aug. 2024 - May 2025</div>
+                    </div>
+                    <div style="display: flex; gap: 0.5rem; margin-bottom: 0.75rem; flex-wrap: wrap;">
+                        <span style="padding: 3px 10px; background: #dcfce7; color: #166534; border-radius: 12px; font-size: 0.8rem; font-weight: 500;">Computer Vision</span>
+                        <span style="padding: 3px 10px; background: #dbeafe; color: #1e40af; border-radius: 12px; font-size: 0.8rem; font-weight: 500;">Sports Analytics</span>
+                    </div>
+                    <ul style="margin-top: 0.75rem; color: #555; font-size: 0.95rem;">
+                        <li>Pioneered a smartphone-based computer vision system that measures baseball bat dimensions from a single photo, replacing manual calipers for the Baltimore Orioles. Achieved 0.148mm accuracy at 180× speed. Filed as U.S. Provisional Patent. Featured in CBS News, ABC News, NY Times Podcast, JHU Hub</li>
                     </ul>
                 </div>
 
@@ -218,7 +253,7 @@
                             <h3 style="margin: 0; font-size: 1.1rem;">CTO & Co-Founder</h3>
                             <div style="color: #666; margin-top: 0.25rem;">DecentraML - Berkeley SkyDeck Batch 16</div>
                         </div>
-                        <div style="color: #888; font-size: 0.9rem; white-space: nowrap;">Jan. 2023 - Dec. 2023</div>
+                        <div style="color: #888; font-size: 0.9rem; white-space: nowrap;">Jan. 2023 - May 2024</div>
                     </div>
                     <div style="display: flex; gap: 0.5rem; margin-bottom: 0.75rem; flex-wrap: wrap;">
                         <span style="padding: 3px 10px; background: #f3e8ff; color: #6b21a8; border-radius: 12px; font-size: 0.8rem; font-weight: 500;">Federated Learning</span>
@@ -226,9 +261,7 @@
                         <span style="padding: 3px 10px; background: #fce7f3; color: #9f1239; border-radius: 12px; font-size: 0.8rem; font-weight: 500;">Privacy</span>
                     </div>
                     <ul style="margin-top: 0.75rem; color: #555; font-size: 0.95rem;">
-                        <li>Co-founded privacy-preserving federated learning platform through Berkeley SkyDeck Batch 16, enabling 50+ enterprises to train models on 10K+ edge devices without centralizing sensitive data</li>
-                        <li>Developed distributed training infrastructure supporting LLM fine-tuning at edge with 3.5x faster convergence versus centralized approaches, reducing deployment costs by 60%</li>
-                        <li>Secured $100K pre-seed funding by demonstrating how federated learning unlocks previously inaccessible enterprise data for model training</li>
+                        <li>Engineered and operated a privacy-preserving federated learning platform serving 50+ enterprise clients across 10K+ edge devices. Built production distributed LLM fine-tuning infrastructure on AWS with CI/CD pipelines, monitoring, and alerting, achieving 3.5x faster convergence and 60% lower cost. Secured $100K pre-seed funding</li>
                     </ul>
                 </div>
 
@@ -246,9 +279,7 @@
                         <span style="padding: 3px 10px; background: #e0e7ff; color: #3730a3; border-radius: 12px; font-size: 0.8rem; font-weight: 500;">Backend</span>
                     </div>
                     <ul style="margin-top: 0.75rem; color: #555; font-size: 0.95rem;">
-                        <li>Architected Java backend infrastructure for AI-driven robotics vision platform, enabling real-time computer vision processing in industrial environments</li>
-                        <li>Optimized data pipelines and refactored legacy codebase, reducing latency by 30%, increasing performance by 50%, and improving human-robot collaboration responsiveness</li>
-                        <li>Scaled platform from prototype to production deployment across 12 industrial facilities</li>
+                        <li>Engineered Java backend and API infrastructure for an AI vision platform for edge robots using Springboot, Docker and Kubernetes, optimizing data pipelines to reduce latency by 30% and the computer vision model inferences to increase throughput by 50%. Deployed and operated production services across 12 facilities</li>
                     </ul>
                 </div>
             </section>
