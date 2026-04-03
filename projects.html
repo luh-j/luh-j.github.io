@@ -35,13 +35,27 @@
 
             <div class="project-filters">
                 <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="sports">Sports</button>
+                <button class="filter-btn" data-filter="ai">AI & NLP</button>
                 <button class="filter-btn" data-filter="robotics">Robotics</button>
                 <button class="filter-btn" data-filter="cv">Computer Vision</button>
-                <button class="filter-btn" data-filter="ai">AI & NLP</button>
-                <button class="filter-btn" data-filter="sports">Sports Analytics</button>
             </div>
 
             <div class="project-grid">
+
+                <!-- RotoWire Multi-Agent System -->
+                <div class="project-card" data-tags="sports ai">
+                    <div class="project-card-body">
+                        <div class="project-card-title">RotoWire Multi-Agent Analytics Platform</div>
+                        <div class="project-card-tags">
+                            <span style="padding: 3px 10px; background: #dbeafe; color: #1e40af; border-radius: 12px; font-size: 0.8rem; font-weight: 500;">Sports</span>
+                            <span style="padding: 3px 10px; background: #fef3c7; color: #92400e; border-radius: 12px; font-size: 0.8rem; font-weight: 500;">LLM</span>
+                            <span style="padding: 3px 10px; background: #fef3c7; color: #92400e; border-radius: 12px; font-size: 0.8rem; font-weight: 500;">Multi-Agent</span>
+                        </div>
+                        <div class="project-card-supporter">In collaboration with RotoWire &middot; JHU SARG</div>
+                        <div class="project-card-desc">Production multi-agent system enabling sports organizations to deploy domain-specific AI agents for performance analysis, waiver evaluation, fantasy projections, and injury assessment with multimodal inputs. Led 30+ engineers in development.</div>
+                    </div>
+                </div>
 
                 <!-- BatVision -->
                 <div class="project-card" data-tags="sports cv">
@@ -49,11 +63,12 @@
                     <div class="project-card-body">
                         <div class="project-card-title">BatVision: Single-View Computer Vision Pipeline for Equipment Dimension Modeling and Quality Control</div>
                         <div class="project-card-tags">
-                            <span style="padding: 3px 10px; background: #dbeafe; color: #1e40af; border-radius: 12px; font-size: 0.8rem; font-weight: 500;">Sports Analytics</span>
+                            <span style="padding: 3px 10px; background: #dbeafe; color: #1e40af; border-radius: 12px; font-size: 0.8rem; font-weight: 500;">Sports</span>
                             <span style="padding: 3px 10px; background: #dcfce7; color: #166534; border-radius: 12px; font-size: 0.8rem; font-weight: 500;">Computer Vision</span>
                         </div>
                         <div class="project-card-supporter">Baltimore Orioles &middot; JHU SARG</div>
                         <div class="project-card-desc">Smartphone-based CV system delivering sub-millimeter accuracy (MAE 0.148 mm) for baseball bat quality control, replacing manual calipers at 180x speed. Filed as U.S. Provisional Patent.</div>
+                        <div style="margin-top: 0.5rem; font-size: 0.85rem; color: #1e40af; font-weight: 500;">Abstract Accepted — MIT SSAC 2026</div>
                         <div class="project-card-links">
                             <a href="https://jhu.technologypublisher.com/technology/59262" target="_blank" class="pub-link-btn">Patent</a>
                             <a href="https://www.cbsnews.com/baltimore/news/johns-hopkins-baseball-bats-maryland-orioles-ai-torpedo/" target="_blank" class="pub-link-btn">CBS News</a>
@@ -63,67 +78,57 @@
                     </div>
                 </div>
 
-                <!-- Vision-Based Aerial Ropeway Monitoring System -->
-                <div class="project-card" data-tags="cv">
-                    <img src="images/projects/lift-monitoring.png" alt="Lift Monitoring" class="project-card-thumb">
-                    <div class="project-card-body">
-                        <div class="project-card-title">Vision-Based Aerial Ropeway Monitoring System</div>
-                        <div class="project-card-tags">
-                            <span style="padding: 3px 10px; background: #dcfce7; color: #166534; border-radius: 12px; font-size: 0.8rem; font-weight: 500;">Computer Vision</span>
-                            <span style="padding: 3px 10px; background: #ffedd5; color: #9a3412; border-radius: 12px; font-size: 0.8rem; font-weight: 500;">Safety</span>
-                        </div>
-                        <div class="project-card-supporter">Vail &middot; JHU SARG</div>
-                        <div class="project-card-desc">YOLO-based tracking and pose estimation system with custom ResNet classifier for detecting hazardous loading/unloading incidents at ski resorts, achieving 95% tracking accuracy with potential to save $20M+ annually across the North American ski industry.</div>
-                    </div>
-                </div>
-
-                <!-- From Chaos to Clarity -->
-                <div class="project-card" data-tags="sports ai">
-                    <div class="project-card-body">
-                        <div class="project-card-title">From Chaos to Clarity: AI-Driven News Intelligence for NFL Front Offices</div>
-                        <div class="project-card-tags">
-                            <span style="padding: 3px 10px; background: #dbeafe; color: #1e40af; border-radius: 12px; font-size: 0.8rem; font-weight: 500;">Sports Analytics</span>
-                            <span style="padding: 3px 10px; background: #fef3c7; color: #92400e; border-radius: 12px; font-size: 0.8rem; font-weight: 500;">LLM</span>
-                            <span style="padding: 3px 10px; background: #e0e7ff; color: #3730a3; border-radius: 12px; font-size: 0.8rem; font-weight: 500;">RAG</span>
-                        </div>
-                        <div class="project-card-supporter">Supported by anonymous NFL teams and RotoWire &middot; JHU SARG</div>
-                        <div class="project-card-desc">On-premise decision support system for NFL scouts with end-to-end RAG pipelines and text-to-SQL achieving 80% top-1 retrieval accuracy (NDCG@5: 0.93) across 40,000+ articles. Deployed 6 task-specific agents with self-reflection and citation verification, reducing daily prospect monitoring from 2+ hours to minutes.</div>
-                    </div>
-                </div>
-
-                <!-- RotoWire Multi-Agent System -->
-                <div class="project-card" data-tags="sports ai">
-                    <div class="project-card-body">
-                        <div class="project-card-title">RotoWire Multi-Agent Analytics Platform</div>
-                        <div class="project-card-tags">
-                            <span style="padding: 3px 10px; background: #dbeafe; color: #1e40af; border-radius: 12px; font-size: 0.8rem; font-weight: 500;">Sports Analytics</span>
-                            <span style="padding: 3px 10px; background: #fef3c7; color: #92400e; border-radius: 12px; font-size: 0.8rem; font-weight: 500;">LLM</span>
-                            <span style="padding: 3px 10px; background: #fef3c7; color: #92400e; border-radius: 12px; font-size: 0.8rem; font-weight: 500;">Multi-Agent</span>
-                        </div>
-                        <div class="project-card-supporter">In collaboration with RotoWire &middot; JHU SARG</div>
-                        <div class="project-card-desc">Production multi-agent system enabling sports organizations to deploy domain-specific AI agents for performance analysis, waiver evaluation, fantasy projections, and injury assessment with multimodal inputs. Led 30+ engineers in development.</div>
-                    </div>
-                </div>
-
                 <!-- GUIDES -->
                 <div class="project-card" data-tags="robotics ai">
+                    <img src="images/projects/guides.png" alt="GUIDES" class="project-card-thumb">
                     <div class="project-card-body">
-                        <div class="project-card-title">GUIDES: Guidance Using Instructor-Distilled Embeddings for Robot Policy Enhancement</div>
+                        <div class="project-card-title">GUIDES: Guidance Using Instructor-Distilled Embeddings for Pre-trained Robot Policy Enhancement</div>
                         <div class="project-card-tags">
                             <span style="padding: 3px 10px; background: #fef9c3; color: #854d0e; border-radius: 12px; font-size: 0.8rem; font-weight: 500;">Robot Learning</span>
                             <span style="padding: 3px 10px; background: #e0f2fe; color: #075985; border-radius: 12px; font-size: 0.8rem; font-weight: 500;">VLM</span>
                             <span style="padding: 3px 10px; background: #ede9fe; color: #5b21b6; border-radius: 12px; font-size: 0.8rem; font-weight: 500;">Imitation Learning</span>
                         </div>
                         <div class="project-card-supporter">JHU Intuitive Computing Lab</div>
-                        <div class="project-card-desc">Framework that transfers human knowledge to robot policies through VLM guidance and demonstration learning, achieving +33.8% improvement for transformers and +106% for diffusion policies. Accepted at ICRA 2026.</div>
+                        <div class="project-card-desc">Lightweight framework that upgrades pre-trained robot policies by injecting guidance embeddings from a fine-tuned VLM Instructor into the policy's latent space, with an LLM-based Reflector that triggers reasoning loops on low-confidence steps. Achieves +33.8% success rate for transformer policies and +106% for diffusion policies in RoboCasa, with real-world UR5 validation. Accepted at ICRA 2026.</div>
                         <div class="project-card-links">
                             <a href="https://arxiv.org/abs/2511.03400" target="_blank" class="pub-link-btn">Paper</a>
                         </div>
                     </div>
                 </div>
 
+                <!-- From Chaos to Clarity -->
+                <div class="project-card" data-tags="sports ai">
+                    <img src="images/projects/chaos-to-clarity.png" alt="From Chaos to Clarity" class="project-card-thumb">
+                    <div class="project-card-body">
+                        <div class="project-card-title">From Chaos to Clarity: How AI Can Transform News into Actionable Intelligence for NFL Front Offices</div>
+                        <div class="project-card-tags">
+                            <span style="padding: 3px 10px; background: #dbeafe; color: #1e40af; border-radius: 12px; font-size: 0.8rem; font-weight: 500;">Sports</span>
+                            <span style="padding: 3px 10px; background: #fef3c7; color: #92400e; border-radius: 12px; font-size: 0.8rem; font-weight: 500;">LLM</span>
+                            <span style="padding: 3px 10px; background: #e0e7ff; color: #3730a3; border-radius: 12px; font-size: 0.8rem; font-weight: 500;">RAG</span>
+                        </div>
+                        <div class="project-card-supporter">Supported by anonymous NFL teams and RotoWire &middot; JHU SARG</div>
+                        <div class="project-card-desc">Locally hosted agentic system that translates 40,000+ unstructured RotoWire articles into decision-ready intelligence for NFL front offices. Combines Chain-of-Thought reasoning, text-to-SQL, RAG retrieval with cross-encoder reranking (80% top-1 accuracy, NDCG@5: 0.93), and a verifier agent that grounds every claim with citations — reducing daily prospect monitoring across nearly 2,000 draft prospects from hours to minutes.</div>
+                        <div style="margin-top: 0.5rem; font-size: 0.85rem; color: #1e40af; font-weight: 500;">Abstract Accepted — MIT SSAC 2026</div>
+                    </div>
+                </div>
+
+                <!-- DecentraML -->
+                <div class="project-card" data-tags="ai">
+                    <div class="project-card-body">
+                        <div class="project-card-title">DecentraML: Privacy-Preserving Federated Learning Platform</div>
+                        <div class="project-card-tags">
+                            <span style="padding: 3px 10px; background: #f3e8ff; color: #6b21a8; border-radius: 12px; font-size: 0.8rem; font-weight: 500;">Federated Learning</span>
+                            <span style="padding: 3px 10px; background: #fef3c7; color: #92400e; border-radius: 12px; font-size: 0.8rem; font-weight: 500;">LLM</span>
+                            <span style="padding: 3px 10px; background: #fce7f3; color: #9f1239; border-radius: 12px; font-size: 0.8rem; font-weight: 500;">Privacy</span>
+                        </div>
+                        <div class="project-card-supporter">Berkeley SkyDeck Batch 16</div>
+                        <div class="project-card-desc">Co-founded platform enabling 50+ enterprises to train models on 10K+ edge devices without centralizing sensitive data. Achieved 3.5x faster convergence versus centralized approaches, reducing deployment costs by 60%. Secured $100K pre-seed funding.</div>
+                    </div>
+                </div>
+
                 <!-- Adaptive Teleoperation -->
                 <div class="project-card" data-tags="robotics">
+                    <img src="images/projects/teleoperation.png" alt="Adaptive Teleoperation" class="project-card-thumb">
                     <div class="project-card-body">
                         <div class="project-card-title">Adaptive Teleoperation Motion Scaling Based on Human Performance Characterization</div>
                         <div class="project-card-tags">
@@ -132,7 +137,8 @@
                             <span style="padding: 3px 10px; background: #ffedd5; color: #9a3412; border-radius: 12px; font-size: 0.8rem; font-weight: 500;">HRI</span>
                         </div>
                         <div class="project-card-supporter">JHU SMARTS Lab</div>
-                        <div class="project-card-desc">Human-subject study on da Vinci Research Kit characterizing sensorimotor constraints in surgical teleoperation. Discovered operators achieve only 29.1% of expected velocity adjustments, with motion scaling explaining 47.6% of performance variance.</div>
+                        <div class="project-card-desc">Human-subject study (n=8, 576 trials) on the da Vinci Research Kit characterizing how operators adapt hand velocity to motion scaling changes. Fitted a power-law model (R²>0.92) revealing operators compensate only 20–43% of scaling changes, with adaptation varying substantially across individuals. Showed tracking error is amplified in low-curvature, high-speed segments and identified a 0.7s deceleration window at direction changes that adaptive systems must respect.</div>
+                        <div style="margin-top: 0.5rem; font-size: 0.85rem; color: #1e40af; font-weight: 500;">Submitted to IROS 2026</div>
                     </div>
                 </div>
 
@@ -150,17 +156,51 @@
                     </div>
                 </div>
 
-                <!-- Voice-Controlled Home Robots -->
-                <div class="project-card" data-tags="robotics ai">
+                <!-- Vision-Based Aerial Ropeway Monitoring System -->
+                <div class="project-card" data-tags="cv">
+                    <img src="images/projects/lift-monitoring.png" alt="Lift Monitoring" class="project-card-thumb">
                     <div class="project-card-body">
-                        <div class="project-card-title">Voice-Controlled Home Robots for Elderly Populations</div>
+                        <div class="project-card-title">Vision-Based Aerial Ropeway Monitoring System</div>
                         <div class="project-card-tags">
-                            <span style="padding: 3px 10px; background: #ffedd5; color: #9a3412; border-radius: 12px; font-size: 0.8rem; font-weight: 500;">HRI</span>
-                            <span style="padding: 3px 10px; background: #fef3c7; color: #92400e; border-radius: 12px; font-size: 0.8rem; font-weight: 500;">LLM</span>
-                            <span style="padding: 3px 10px; background: #fef9c3; color: #854d0e; border-radius: 12px; font-size: 0.8rem; font-weight: 500;">Speech</span>
+                            <span style="padding: 3px 10px; background: #dcfce7; color: #166534; border-radius: 12px; font-size: 0.8rem; font-weight: 500;">Computer Vision</span>
+                            <span style="padding: 3px 10px; background: #ffedd5; color: #9a3412; border-radius: 12px; font-size: 0.8rem; font-weight: 500;">Safety</span>
                         </div>
-                        <div class="project-card-supporter">JHU Intuitive Computing Lab</div>
-                        <div class="project-card-desc">Analyzing how end-to-end audio and STT-based systems break down with real elderly speech — from hoarseness and hesitations to attention shifts. Contributing to IRB-approved benchmarks evaluating out-of-the-box systems on natural elderly speech.</div>
+                        <div class="project-card-supporter">Vail &middot; JHU SARG</div>
+                        <div class="project-card-desc">YOLO-based tracking and pose estimation system with custom ResNet classifier for detecting hazardous loading/unloading incidents at ski resorts, achieving 95% tracking accuracy with potential to save $20M+ annually across the North American ski industry.</div>
+                    </div>
+                </div>
+
+                <!-- Audio-Visual Generation -->
+                <div class="project-card" data-tags="ai cv">
+                    <img src="images/projects/network-bending.png" alt="Network Bending" class="project-card-thumb">
+                    <div class="project-card-body">
+                        <div class="project-card-title">Network Bending of Diffusion Models for Audio-Visual Generation</div>
+                        <div class="project-card-tags">
+                            <span style="padding: 3px 10px; background: #fef9c3; color: #854d0e; border-radius: 12px; font-size: 0.8rem; font-weight: 500;">Generative AI</span>
+                            <span style="padding: 3px 10px; background: #e0e7ff; color: #3730a3; border-radius: 12px; font-size: 0.8rem; font-weight: 500;">Music</span>
+                            <span style="padding: 3px 10px; background: #dcfce7; color: #166534; border-radius: 12px; font-size: 0.8rem; font-weight: 500;">Computer Vision</span>
+                        </div>
+                        <div class="project-card-supporter">UC Berkeley CNMAT</div>
+                        <div class="project-card-desc">Music visualization tool applying network bending — point-wise, tensor-wise, and morphological operators within Stable Diffusion layers — to generate audio-reactive videos driven by features like RMS and spectral flux. Published at DAFx 2024 and presented at a live Berkeley concert with real-time creative collaboration between human composers and generative AI.</div>
+                        <div class="project-card-links">
+                            <a href="https://arxiv.org/abs/2406.19589" target="_blank" class="pub-link-btn">Paper</a>
+                            <a href="https://dzluke.github.io/DAFX2024/" target="_blank" class="pub-link-btn">Website</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Multi-Agent Millirobots -->
+                <div class="project-card" data-tags="robotics ai">
+                    <img src="images/projects/millirobots.jpg" alt="Collaborative Millirobots" class="project-card-thumb">
+                    <div class="project-card-body">
+                        <div class="project-card-title">Model-Based Learning for Millirobot Cooperative Object Delivery</div>
+                        <div class="project-card-tags">
+                            <span style="padding: 3px 10px; background: #fef3c7; color: #92400e; border-radius: 12px; font-size: 0.8rem; font-weight: 500;">Multi-Agent</span>
+                            <span style="padding: 3px 10px; background: #ede9fe; color: #5b21b6; border-radius: 12px; font-size: 0.8rem; font-weight: 500;">Robotics</span>
+                            <span style="padding: 3px 10px; background: #dcfce7; color: #166534; border-radius: 12px; font-size: 0.8rem; font-weight: 500;">Model-Based RL</span>
+                        </div>
+                        <div class="project-card-supporter">UC Berkeley Biomimetic Millisystems Lab</div>
+                        <div class="project-card-desc">Learned dynamics model with model-predictive control for cooperative object delivery using pairs of hexapedal Kamigami millirobots. Achieved 4cm average positioning error with only 9 training samples, outperforming actor-critic and meta-RL baselines by 100x in sample efficiency across tethered towing and untethered pushing tasks.</div>
                     </div>
                 </div>
 
@@ -193,48 +233,6 @@
                         <div class="project-card-links">
                             <a href="https://sites.google.com/berkeley.edu/ee-106a-final-project-report/introduction" target="_blank" class="pub-link-btn">Website</a>
                         </div>
-                    </div>
-                </div>
-
-                <!-- Multi-Agent Millirobots -->
-                <div class="project-card" data-tags="robotics ai">
-                    <div class="project-card-body">
-                        <div class="project-card-title">Multi-Agent Collaborative Millirobots</div>
-                        <div class="project-card-tags">
-                            <span style="padding: 3px 10px; background: #fef3c7; color: #92400e; border-radius: 12px; font-size: 0.8rem; font-weight: 500;">Multi-Agent</span>
-                            <span style="padding: 3px 10px; background: #ede9fe; color: #5b21b6; border-radius: 12px; font-size: 0.8rem; font-weight: 500;">Robotics</span>
-                            <span style="padding: 3px 10px; background: #dcfce7; color: #166534; border-radius: 12px; font-size: 0.8rem; font-weight: 500;">Model-Based RL</span>
-                        </div>
-                        <div class="project-card-supporter">UC Berkeley Biomimetic Millisystems Lab</div>
-                        <div class="project-card-desc">Multi-agent system for legged millirobots integrating computer vision with model-predictive control and model-based RL. Achieved 4cm positioning error with only 9 training samples, demonstrating 100x sample efficiency over actor-critic and meta-RL baselines.</div>
-                    </div>
-                </div>
-
-                <!-- Audio-Visual Generation -->
-                <div class="project-card" data-tags="ai cv">
-                    <div class="project-card-body">
-                        <div class="project-card-title">Audio-Conditioned Video Generation</div>
-                        <div class="project-card-tags">
-                            <span style="padding: 3px 10px; background: #fef9c3; color: #854d0e; border-radius: 12px; font-size: 0.8rem; font-weight: 500;">Generative AI</span>
-                            <span style="padding: 3px 10px; background: #e0e7ff; color: #3730a3; border-radius: 12px; font-size: 0.8rem; font-weight: 500;">Music</span>
-                            <span style="padding: 3px 10px; background: #dcfce7; color: #166534; border-radius: 12px; font-size: 0.8rem; font-weight: 500;">Computer Vision</span>
-                        </div>
-                        <div class="project-card-supporter">UC Berkeley CNMAT</div>
-                        <div class="project-card-desc">Pioneered audio-conditioned video generation pipeline using Stable Diffusion with music feature extraction for synchronized audio-visual content. Presented at live Berkeley concert demonstrating real-time creative collaboration between human composers and generative AI.</div>
-                    </div>
-                </div>
-
-                <!-- DecentraML -->
-                <div class="project-card" data-tags="ai">
-                    <div class="project-card-body">
-                        <div class="project-card-title">DecentraML: Privacy-Preserving Federated Learning Platform</div>
-                        <div class="project-card-tags">
-                            <span style="padding: 3px 10px; background: #f3e8ff; color: #6b21a8; border-radius: 12px; font-size: 0.8rem; font-weight: 500;">Federated Learning</span>
-                            <span style="padding: 3px 10px; background: #fef3c7; color: #92400e; border-radius: 12px; font-size: 0.8rem; font-weight: 500;">LLM</span>
-                            <span style="padding: 3px 10px; background: #fce7f3; color: #9f1239; border-radius: 12px; font-size: 0.8rem; font-weight: 500;">Privacy</span>
-                        </div>
-                        <div class="project-card-supporter">Berkeley SkyDeck Batch 16</div>
-                        <div class="project-card-desc">Co-founded platform enabling 50+ enterprises to train models on 10K+ edge devices without centralizing sensitive data. Achieved 3.5x faster convergence versus centralized approaches, reducing deployment costs by 60%. Secured $100K pre-seed funding.</div>
                     </div>
                 </div>
 
