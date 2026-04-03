@@ -1370,6 +1370,41 @@ a:hover {
     flex-wrap: wrap;
 }
 
+.project-filters {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-bottom: var(--space-lg);
+}
+
+.filter-btn {
+    padding: 6px 16px;
+    border: 1px solid var(--border-default);
+    border-radius: 20px;
+    background: var(--bg-primary);
+    color: var(--text-secondary);
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition-base);
+}
+
+.filter-btn:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+.filter-btn.active {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: #fff;
+}
+
+.project-card.hidden {
+    display: none;
+}
+
 .container-projects {
     max-width: var(--container-wide);
     margin: 0 auto;

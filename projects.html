@@ -33,10 +33,18 @@
         <div class="container-projects">
             <h1 class="page-title">Projects</h1>
 
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="robotics">Robotics</button>
+                <button class="filter-btn" data-filter="cv">Computer Vision</button>
+                <button class="filter-btn" data-filter="ai">AI & NLP</button>
+                <button class="filter-btn" data-filter="sports">Sports Analytics</button>
+            </div>
+
             <div class="project-grid">
 
                 <!-- BatVision -->
-                <div class="project-card">
+                <div class="project-card" data-tags="sports cv">
                     <img src="images/projects/batvision.png" alt="BatVision" class="project-card-thumb">
                     <div class="project-card-body">
                         <div class="project-card-title">BatVision: Single-View Computer Vision Pipeline for Equipment Dimension Modeling and Quality Control</div>
@@ -56,7 +64,7 @@
                 </div>
 
                 <!-- Vision-Based Aerial Ropeway Monitoring System -->
-                <div class="project-card">
+                <div class="project-card" data-tags="cv">
                     <img src="images/projects/lift-monitoring.png" alt="Lift Monitoring" class="project-card-thumb">
                     <div class="project-card-body">
                         <div class="project-card-title">Vision-Based Aerial Ropeway Monitoring System</div>
@@ -70,7 +78,7 @@
                 </div>
 
                 <!-- From Chaos to Clarity -->
-                <div class="project-card">
+                <div class="project-card" data-tags="sports ai">
                     <div class="project-card-body">
                         <div class="project-card-title">From Chaos to Clarity: AI-Driven News Intelligence for NFL Front Offices</div>
                         <div class="project-card-tags">
@@ -84,7 +92,7 @@
                 </div>
 
                 <!-- RotoWire Multi-Agent System -->
-                <div class="project-card">
+                <div class="project-card" data-tags="sports ai">
                     <div class="project-card-body">
                         <div class="project-card-title">RotoWire Multi-Agent Analytics Platform</div>
                         <div class="project-card-tags">
@@ -98,7 +106,7 @@
                 </div>
 
                 <!-- GUIDES -->
-                <div class="project-card">
+                <div class="project-card" data-tags="robotics ai">
                     <div class="project-card-body">
                         <div class="project-card-title">GUIDES: Guidance Using Instructor-Distilled Embeddings for Robot Policy Enhancement</div>
                         <div class="project-card-tags">
@@ -115,7 +123,7 @@
                 </div>
 
                 <!-- Adaptive Teleoperation -->
-                <div class="project-card">
+                <div class="project-card" data-tags="robotics">
                     <div class="project-card-body">
                         <div class="project-card-title">Adaptive Teleoperation Motion Scaling Based on Human Performance Characterization</div>
                         <div class="project-card-tags">
@@ -129,7 +137,7 @@
                 </div>
 
                 <!-- Cultural Alignment in VLMs -->
-                <div class="project-card">
+                <div class="project-card" data-tags="ai cv">
                     <div class="project-card-body">
                         <div class="project-card-title">Cultural Alignment in Vision-Language Models</div>
                         <div class="project-card-tags">
@@ -143,7 +151,7 @@
                 </div>
 
                 <!-- Voice-Controlled Home Robots -->
-                <div class="project-card">
+                <div class="project-card" data-tags="robotics ai">
                     <div class="project-card-body">
                         <div class="project-card-title">Voice-Controlled Home Robots for Elderly Populations</div>
                         <div class="project-card-tags">
@@ -157,7 +165,7 @@
                 </div>
 
                 <!-- Autonomous Navigation -->
-                <div class="project-card">
+                <div class="project-card" data-tags="robotics cv ai">
                     <div class="project-card-body">
                         <div class="project-card-title">Learning-Based Waypoint Navigation</div>
                         <div class="project-card-tags">
@@ -171,7 +179,8 @@
                 </div>
 
                 <!-- RoboReversi -->
-                <div class="project-card">
+                <div class="project-card" data-tags="robotics cv">
+                    <img src="images/projects/roboreversi.png" alt="RoboReversi" class="project-card-thumb">
                     <div class="project-card-body">
                         <div class="project-card-title">RoboReversi: Autonomous Game-Playing Robot</div>
                         <div class="project-card-tags">
@@ -182,13 +191,13 @@
                         <div class="project-card-supporter">UC Berkeley EECS C106A</div>
                         <div class="project-card-desc">Sawyer robot arm that autonomously plays Reversi against human opponents using AR-tag board localization, color-filtering piece detection, Alpha-Beta Pruning game strategy, and MoveIt-based path planning with collision-aware piece flipping.</div>
                         <div class="project-card-links">
-                            <a href="https://sites.google.com/berkeley.edu/ee-106a-final-project-report/introduction" target="_blank" class="pub-link-btn">Report</a>
+                            <a href="https://sites.google.com/berkeley.edu/ee-106a-final-project-report/introduction" target="_blank" class="pub-link-btn">Website</a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Multi-Agent Millirobots -->
-                <div class="project-card">
+                <div class="project-card" data-tags="robotics ai">
                     <div class="project-card-body">
                         <div class="project-card-title">Multi-Agent Collaborative Millirobots</div>
                         <div class="project-card-tags">
@@ -202,7 +211,7 @@
                 </div>
 
                 <!-- Audio-Visual Generation -->
-                <div class="project-card">
+                <div class="project-card" data-tags="ai cv">
                     <div class="project-card-body">
                         <div class="project-card-title">Audio-Conditioned Video Generation</div>
                         <div class="project-card-tags">
@@ -216,7 +225,7 @@
                 </div>
 
                 <!-- DecentraML -->
-                <div class="project-card">
+                <div class="project-card" data-tags="ai">
                     <div class="project-card-body">
                         <div class="project-card-title">DecentraML: Privacy-Preserving Federated Learning Platform</div>
                         <div class="project-card-tags">

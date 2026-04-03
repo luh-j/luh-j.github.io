@@ -548,7 +548,31 @@
     // ========================================
     // Console Easter Egg
     // ========================================
-    
+    // Project Tag Filtering
+    // ========================================
+
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const projectCards = document.querySelectorAll('.project-card[data-tags]');
+
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const filter = btn.dataset.filter;
+
+            filterBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            projectCards.forEach(card => {
+                if (filter === 'all' || card.dataset.tags.split(' ').includes(filter)) {
+                    card.classList.remove('hidden');
+                } else {
+                    card.classList.add('hidden');
+                }
+            });
+        });
+    });
+
+    // ========================================
+
     const styles = [
         'background: linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
         'color: white',
